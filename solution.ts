@@ -1,4 +1,4 @@
-// Solition-1
+// Solution-1
 const formatValue = (value: string | number | boolean): string | number | boolean => {
   if (typeof value === "string") {
     return value.toUpperCase();
@@ -15,7 +15,7 @@ const formatValue = (value: string | number | boolean): string | number | boolea
   return value;
 };
 
-// Solition-2
+// Solution-2
 const getLength = (value: string | number[]): string => {
   if (typeof value === "string") {
     return value.length.toString();
@@ -28,7 +28,7 @@ const getLength = (value: string | number[]): string => {
   return value;
 };
 
-// Solition-3
+// Solution-3
 class Person {
   name: string;
   age: number;
@@ -43,7 +43,7 @@ class Person {
   }
 }
 
-// Solition-4
+// Solution-4
 type Item = {
   title: string;
   rating: number;
@@ -53,7 +53,7 @@ const filterByRating = (items: Item[]): Item[] => {
   return items.filter(item => item.rating >= 4);
 };
 
-// Solition-5
+// Solution-5
 type User = {
   id: number;
   name: string;
@@ -72,7 +72,7 @@ const filterActiveUsers = (users: User[]): User[] => {
   });
 };
 
-// Solition-6
+// Solution-6
 interface Book {
   title: string;
   author: string;
@@ -85,7 +85,7 @@ const printBookDetails = (book: Book): string => {
   return `Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: ${availability}`;
 };
 
-// Solition-7
+// Solution-7
 const getUniqueValues = (
   arr1: (string | number)[],
   arr2: (string | number)[]
@@ -131,7 +131,7 @@ const getUniqueValues = (
   return result;
 };
 
-// Solition-8
+// Solution-8
 interface Product {
   name: string;
   price: number;
@@ -157,16 +157,3 @@ const calculateTotalPrice = (products: Product[]): number => {
     })
     .reduce((total, current) => total + current, 0);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
