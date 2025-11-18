@@ -1,4 +1,3 @@
-// Solution-1
 const formatValue = (value: string | number | boolean): string | number | boolean => {
   if (typeof value === "string") {
     return value.toUpperCase();
@@ -15,7 +14,6 @@ const formatValue = (value: string | number | boolean): string | number | boolea
   return value;
 };
 
-// Solution-2
 const getLength = (value: string | number[]): string => {
   if (typeof value === "string") {
     return value.length.toString();
@@ -28,7 +26,6 @@ const getLength = (value: string | number[]): string => {
   return value;
 };
 
-// Solution-3
 class Person {
   name: string;
   age: number;
@@ -43,7 +40,6 @@ class Person {
   }
 }
 
-// Solution-4
 type Item = {
   title: string;
   rating: number;
@@ -53,7 +49,6 @@ const filterByRating = (items: Item[]): Item[] => {
   return items.filter(item => item.rating >= 4);
 };
 
-// Solution-5
 type User = {
   id: number;
   name: string;
@@ -63,7 +58,6 @@ type User = {
 
 const filterActiveUsers = (users: User[]): User[] => {
   return users.filter(user => {
-    // Type checking
     if (typeof user.isActive !== "boolean") {
       return false;
     }
@@ -72,7 +66,6 @@ const filterActiveUsers = (users: User[]): User[] => {
   });
 };
 
-// Solution-6
 interface Book {
   title: string;
   author: string;
@@ -85,18 +78,15 @@ const printBookDetails = (book: Book): string => {
   return `Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: ${availability}`;
 };
 
-// Solution-7
 const getUniqueValues = (
   arr1: (string | number)[],
   arr2: (string | number)[]
 ): (string | number)[] => {
   const result: (string | number)[] = [];
 
-  // Add items from arr1
   for (let i = 0; i < arr1.length; i++) {
     const value = arr1[i];
 
-    // Check duplicates
     let exists = false;
     for (let j = 0; j < result.length; j++) {
       if (result[j] === value) {
@@ -110,11 +100,9 @@ const getUniqueValues = (
     }
   }
 
-  // Add items from arr2
   for (let i = 0; i < arr2.length; i++) {
     const value = arr2[i];
 
-    // Check duplicates
     let exists = false;
     for (let j = 0; j < result.length; j++) {
       if (result[j] === value) {
@@ -131,12 +119,11 @@ const getUniqueValues = (
   return result;
 };
 
-// Solution-8
 interface Product {
   name: string;
   price: number;
   quantity: number;
-  discount?: number; // optional (0–100)
+  discount?: number;
 }
 
 const calculateTotalPrice = (products: Product[]): number => {
